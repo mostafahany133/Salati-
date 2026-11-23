@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-ar: "Cairo", "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-en: "Plus Jakarta Sans", "Cairo", system-ui, sans-serif;
+    --font-quran: "Amiri", Georgia, serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  html[dir="rtl"] body {
+    font-family: var(--font-ar);
+  }
+
+  html[dir="ltr"] body {
+    font-family: var(--font-en);
+  }
+}
+
+.font-quran {
+  font-family: var(--font-quran);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle Islamic geometric star-lattice background pattern (low contrast, non-distracting) */
+.islamic-lattice {
+  background-image: radial-gradient(circle at 1px 1px, rgba(16, 185, 129, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+.dark .islamic-lattice {
+  background-image: radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.07) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

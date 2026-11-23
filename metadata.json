@@ -1,0 +1,6 @@
+{
+  "name": "Salati | صلاتي",
+  "description": "مساعد إسلامي شخصي متكامل للمحافظة على الصلاة وتنظيم اليوم حول مواقيتها، مع رحلة الاستعداد والوضوء والخدمات الإسلامية ولوحة الإدارة.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
